@@ -1,0 +1,10 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+
+  &__item {
+    margin-bottom: 40px;
+  }
+}

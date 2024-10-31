@@ -1,0 +1,23 @@
+@mixin main-font($weight, $style: normal) {
+  font-family: 'Lato', sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin media-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-min(768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media-min(1400px) {
+    @content;
+  }
+}

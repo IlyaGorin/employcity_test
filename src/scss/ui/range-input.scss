@@ -1,0 +1,54 @@
+@use '../variables' as *;
+
+.range-input {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__value {
+    color: rgba($font-white, 0.85);
+  }
+
+  .range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgba($font-white, 0.7);
+    border: 1px solid $font-white;
+    border-radius: 5px;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid $main-dark-blue;
+      background: #42a9ed;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid $main-dark-blue;
+      background: #42a9ed;
+      cursor: pointer;
+    }
+
+    &::-ms-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid $main-dark-blue;
+      background: #42a9ed;
+      cursor: pointer;
+    }
+  }
+}

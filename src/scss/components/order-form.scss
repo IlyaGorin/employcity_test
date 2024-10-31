@@ -1,0 +1,17 @@
+.order-form {
+  &__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+}

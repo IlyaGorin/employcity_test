@@ -1,0 +1,51 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.hero {
+  min-height: 400px;
+  padding: 110px 0 40px;
+  background: url('/src/images/bg-mobile.jpg') no-repeat left bottom;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 20px;
+    @include main-font(700);
+    font-size: 24px;
+    line-height: 1.2;
+    color: $font-black;
+
+    span {
+      color: #3e9cdc;
+    }
+  }
+
+  &__description {
+    @include main-font(700);
+    color: $font-black;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    color: $font-black;
+    font-size: 16px;
+    line-height: 1.5;
+
+    li {
+      position: relative;
+      z-index: 1;
+      padding-left: 10px;
+    }
+
+    li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__buttons-list {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,33 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.file-input {
+  &__label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 3px;
+    border: 2px solid $main-blue;
+    background-color: $main-white;
+    color: $font-dark;
+
+    span {
+      display: inline-flex;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 20px;
+        background: url('/src/images/file-input.svg') no-repeat center;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

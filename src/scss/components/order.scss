@@ -1,0 +1,27 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.order {
+  background-color: $main-dark;
+  padding: 40px 0;
+
+  &__title {
+    margin-bottom: 20px;
+    @include main-font(700);
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+
+    span {
+      color: #3e9cdc;
+    }
+  }
+
+  &__info {
+    margin-bottom: 40px;
+    color: #bbbbbb;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
