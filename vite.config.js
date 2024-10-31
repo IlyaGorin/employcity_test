@@ -14,6 +14,7 @@ export default defineConfig({
       customDomId: '__svg__icons__dom__',
     }),
   ],
+  base: './',
   build: {
     outDir: 'docs',
   },
