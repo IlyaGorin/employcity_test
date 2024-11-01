@@ -7,12 +7,38 @@
   background: url('/src/images/bg-mobile.jpg') no-repeat left bottom;
   background-size: cover;
 
+  @include tablet {
+    min-height: 500px;
+    background: url('/src/images/bg-tablet.jpg') no-repeat center bottom;
+    background-size: cover;
+  }
+
+  @include desktop {
+    min-height: 850px;
+    padding: 205px 0 40px;
+    background: url('/src/images/bg-desktop.jpg') no-repeat center;
+    background-size: cover;
+  }
+
   &__title {
     margin-bottom: 20px;
-    @include main-font(700);
+    @include main-font('LatoBold', 700);
     font-size: 24px;
     line-height: 1.2;
     color: $font-black;
+    text-transform: uppercase;
+
+    @include tablet {
+      max-width: 780px;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 90px;
+      font-size: 48px;
+      line-height: 57px;
+    }
 
     span {
       color: #3e9cdc;
@@ -20,10 +46,16 @@
   }
 
   &__description {
-    @include main-font(700);
+    @include main-font('LatoBold', 700);
     color: $font-black;
     font-size: 16px;
     line-height: 1.5;
+
+    @include desktop {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__list {
@@ -32,16 +64,39 @@
     font-size: 16px;
     line-height: 1.5;
 
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 78px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
     li {
       position: relative;
       z-index: 1;
       padding-left: 10px;
+
+      @include desktop {
+        padding-left: 27px;
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     li::before {
       content: '-';
       position: absolute;
       left: 0;
+
+      @include desktop {
+        left: 11px;
+      }
     }
   }
 

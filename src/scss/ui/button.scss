@@ -10,16 +10,31 @@
   line-height: 16px;
   text-transform: uppercase;
   border-radius: 4px;
+  transition: all 0.3s ease;
 
   &--blue {
     background-color: $main-blue;
     border: 1px solid $main-white;
     color: $font-white;
+
+    &:hover {
+      border: 1px solid $main-blue;
+      background-color: $main-white;
+      color: $main-blue;
+      transition: all 0.3s ease;
+    }
   }
 
   &--white {
     border: 1px solid #6f6d7b;
     background-color: $main-white;
     color: $font-dark-gray;
+
+    &:hover {
+      background-color: $main-blue;
+      border: 1px solid $main-white;
+      color: $font-white;
+      transition: all 0.3s ease;
+    }
   }
 }

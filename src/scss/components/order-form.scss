@@ -1,17 +1,44 @@
+@use '../mixins' as *;
+
 .order-form {
   &__fieldset {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 30px;
+
+    @include desktop {
+      flex-direction: row;
+      gap: calc(30 / 1172) * 100%;
+    }
   }
 
   &__item {
     width: 100%;
+    margin-bottom: 30px;
+
+    @include desktop {
+      width: calc(370 / 1172) * 100%;
+    }
+
+    &--range {
+      @include desktop {
+        width: calc(770 / 1172) * 100%;
+      }
+    }
   }
 
   &__submit {
     width: 100%;
+
+    @include desktop {
+      display: block;
+      width: 370px;
+      height: 48px;
+      @include main-font('LatoSemibold', 600);
+      font-size: 15px;
+      line-height: 18px;
+      margin: 52px auto 0;
+    }
   }
 }

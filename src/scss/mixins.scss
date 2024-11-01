@@ -1,7 +1,6 @@
-@mixin main-font($weight, $style: normal) {
-  font-family: 'Lato', sans-serif;
+@mixin main-font($family: 'LatoRegular', $weight: 400) {
+  font-family: $family, sans-serif;
   font-weight: $weight;
-  font-style: $style;
 }
 
 @mixin media-min($breakpoint) {
@@ -17,7 +16,13 @@
 }
 
 @mixin desktop {
-  @include media-min(1400px) {
+  @include media-min(992px) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @include media-min(1200px) {
     @content;
   }
 }

@@ -3,13 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="описание">
+    <meta name="keywords" content="ключевые, слова">
     <title>Тестовое задание</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="header">
@@ -29,7 +25,9 @@
           </button>
           <ul class="navigation__list">
             <li>
-              <a class="navigation__link" href="#">Бизнес</a>
+              <a class="navigation__link navigation__link--active" href="#"
+                >Бизнес</a
+              >
             </li>
             <li>
               <a class="navigation__link" href="#">О нас</a>
@@ -48,7 +46,7 @@
       <section class="hero">
         <div class="wrapper hero__wrapper">
           <h1 class="hero__title">
-            <span>Lorem ipsum dolor</span> sit amet consectetur
+            <span>Lorem ipsum dolor</span> sit ametconsectetur
             <span>adipiscing</span>
           </h1>
           <p class="hero__description">
@@ -76,56 +74,80 @@
             Перед заполнением формы ознакомьтесь с нашей схемой работы!
           </p>
           <ul class="order__steps steps">
-            <li class="steps__item step-item">
-              <div class="step-item__icon">
-                <svg width="55" height="55">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
+            <li class="steps__item">
+              <div class="step-item">
+                <div class="step-item__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                </div>
+                <p class="step-item__desc">Lorem ipsum dolor sit amet</p>
               </div>
-              <p class="step-item__desc">Lorem ipsum dolor sit amet</p>
             </li>
-            <li class="steps__item step-item">
-              <div class="step-item__icon">
-                <svg width="55" height="55">
-                  <use xlink:href="#icon-percent"></use>
-                </svg>
+            <li class="steps__item">
+              <div class="step-item">
+                <div class="step-item__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="#icon-percent"></use>
+                  </svg>
+                </div>
+                <p class="step-item__desc">Сonsecteturadipiscing elit</p>
               </div>
-              <p class="step-item__desc">Сonsecteturadipiscing elit</p>
             </li>
-            <li class="steps__item step-item">
-              <div class="step-item__icon">
-                <svg width="55" height="55">
-                  <use xlink:href="#icon-file"></use>
-                </svg>
+            <li class="steps__item">
+              <div class="step-item">
+                <div class="step-item__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="#icon-file"></use>
+                  </svg>
+                </div>
+                <p class="step-item__desc">Sed do eiusmod tempor</p>
               </div>
-              <p class="step-item__desc">Sed do eiusmod tempor</p>
             </li>
-            <li class="steps__item step-item">
-              <div class="step-item__icon">
-                <svg width="55" height="55">
-                  <use xlink:href="#icon-message"></use>
-                </svg>
+            <li class="steps__item">
+              <div class="step-item">
+                <div class="step-item__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="#icon-message"></use>
+                  </svg>
+                </div>
+                <p class="step-item__desc">Esse cillum dolore eu fugiat</p>
               </div>
-              <p class="step-item__desc">Esse cillum dolore eu fugiat</p>
             </li>
-            <li class="steps__item step-item">
-              <div class="step-item__icon">
-                <svg width="55" height="55">
-                  <use xlink:href="#icon-money"></use>
-                </svg>
+            <li class="steps__item">
+              <div class="step-item">
+                <div class="step-item__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="#icon-money"></use>
+                  </svg>
+                </div>
+                <p class="step-item__desc">
+                  Excepteur sint occaecat cupidatat non proident
+                </p>
               </div>
-              <p class="step-item__desc">
-                Excepteur sint occaecat cupidatat non proident
-              </p>
             </li>
           </ul>
-          <form action="" class="order__form order-form">
+          <form class="order__form order-form">
             <fieldset class="order-form__fieldset">
               <div class="order-form__item">
                 <div class="custom-select">
-                  <input type="hidden" value="" />
+                  <input type="hidden" id="select-value" value="" />
                   <div class="custom-select__selected">
-                    Выберите тип системы
+                    <span class="custom-select__text">Выберите тип системы</span>
+                    <span class="custom-select__arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.9337 12.3485C14.9337 12.4199 14.898 12.5003 14.8444 12.5538L14.398 13.0003C14.3444 13.0538 14.2641 13.0895 14.1927 13.0895C14.1212 13.0895 14.0409 13.0538 13.9873 13.0003L10.4784 9.49132L6.96944 13.0003C6.91587 13.0538 6.83551 13.0895 6.76408 13.0895C6.68372 13.0895 6.6123 13.0538 6.55872 13.0003L6.1123 12.5538C6.05872 12.5003 6.02301 12.4199 6.02301 12.3485C6.02301 12.277 6.05872 12.1967 6.1123 12.1431L10.273 7.9824C10.3266 7.92882 10.4069 7.89311 10.4784 7.89311C10.5498 7.89311 10.6302 7.92882 10.6837 7.9824L14.8444 12.1431C14.898 12.1967 14.9337 12.277 14.9337 12.3485Z"
+                          fill="#000"
+                        />
+                      </svg>
+                    </span>
                   </div>
                   <div class="custom-select__options">
                     <div class="custom-select__wrapper">
@@ -154,8 +176,8 @@
               <div class="order-form__item">
                 <input
                   type="email"
-                  name=""
-                  id=""
+                  name="email"
+                  id="email"
                   class="input"
                   placeholder="Ваш e-mail"
                   required
@@ -164,8 +186,8 @@
               <div class="order-form__item">
                 <input
                   type="text"
-                  name=""
-                  id=""
+                  name="name"
+                  id="name"
                   class="input"
                   placeholder="Ваше имя"
                   required
@@ -195,9 +217,7 @@
               </div>
               <div class="order-form__item">
                 <div class="file-input">
-                  <label
-                    for="file-upload"
-                    class="file-input__label"
+                  <label for="file-upload" class="file-input__label"
                     ><span>Прикрепить файл</span></label
                   >
                   <input
@@ -222,7 +242,7 @@
     <footer class="footer">
       <div class="wrapper footer__wrapper">
         <p class="footer__copyright">
-          &#169; 2018 «LoremIpsum.net» Все права защищены.
+          &#169; 2018 <span>«LoremIpsum.net»</span> Все права защищены.
         </p>
         <ul class="footer__payments payments">
           <li class="payments__item">
@@ -231,7 +251,7 @@
                 <use xlink:href="#icon-qiwi"></use>
               </svg>
             </span>
-            Qiwi wallet
+            QIWI wallet
           </li>
           <li class="payments__item">
             <span>
@@ -270,58 +290,7 @@
         </ul>
       </div>
     </footer>
-    <script>
-      // const selectElement = document.getElementById('select');
-      const customSelectDropdown = document.querySelector(
-        '.custom-select__dropdown'
-      );
-      const selected = document.querySelector('.selected');
-      // selectElement.addEventListener('click', (evt) => {
-      //   evt.preventDefault();
-      //   console.log(1231);
-      // });
-      // // Функция для заполнения кастомного селекта на основе обычного селекта
-      // function populateCustomSelect() {
-      //   // Очищаем предыдущие опции
-      //   customSelectDropdown.innerHTML = '';
 
-      //   // Перебираем опции обычного селекта
-      //   Array.from(selectElement.options).forEach((option) => {
-      //     // Пропускаем первую опцию (обычно она служит заголовком)
-      //     if (option.value) {
-      //       // Создаем элемент для кастомной опции
-      //       const customOption = document.createElement('div');
-      //       customOption.className = 'custom-select__option';
-      //       customOption.textContent = option.text;
-      //       customOption.setAttribute('data-value', option.value);
-
-      //       customOption.addEventListener('click', () => {
-      //         selected.textContent = option.text;
-      //         selectElement.value = option.value;
-      //         customSelectDropdown.style.display = 'none';
-      //       });
-
-      //       customSelectDropdown.appendChild(customOption);
-      //     }
-      //   });
-      // }
-
-      // populateCustomSelect();
-
-      // // Обработчик клика по кастомному селекту
-      // const customSelect = document.querySelector('.custom-select');
-      // customSelect.addEventListener('click', () => {
-      //   const isOpen = customSelectDropdown.style.display === 'block';
-      //   customSelectDropdown.style.display = isOpen ? 'none' : 'block';
-      // });
-
-      // // Закрыть дропдаун при клике вне него
-      // document.addEventListener('click', (e) => {
-      //   if (!customSelect.contains(e.target)) {
-      //     customSelectDropdown.style.display = 'none';
-      //   }
-      // });
-    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

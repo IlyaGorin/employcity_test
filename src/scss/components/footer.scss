@@ -1,12 +1,25 @@
 @use '../variables' as *;
+@use '../mixins' as *;
 
 .footer {
   padding: 20px 0;
   background-color: $main-gray;
 
+  @include desktop-xl {
+    height: 80px;
+    padding: 0;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column-reverse;
+
+    @include desktop-xl {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
   }
 
   &__copyright {
@@ -14,5 +27,13 @@
     font-size: 13px;
     line-height: 15px;
     text-align: center;
+
+    @include desktop-xl {
+      margin-top: 0;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
   }
 }

@@ -1,6 +1,17 @@
+@use '../mixins' as *;
+
 .buttons-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: fit-content;
+
+  @include tablet {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  @include desktop {
+    gap: 30px;
+  }
 }

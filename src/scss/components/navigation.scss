@@ -7,6 +7,10 @@
     width: 31px;
     height: 18px;
 
+    @include desktop {
+      display: none;
+    }
+
     span {
       position: absolute;
       left: 0;
@@ -57,9 +61,8 @@
 
   &__list {
     position: fixed;
-    transform: translateX(100%);
     z-index: 10;
-    right: 0;
+    right: -100%;
     top: 70px;
     display: flex;
     flex-direction: column;
@@ -72,18 +75,39 @@
     transition: all 0.3s ease;
     opacity: 0;
 
+    @include desktop {
+      position: static;
+      flex-direction: row;
+      gap: 60px;
+      width: 100%;
+      padding: 0;
+      background: transparent;
+      opacity: 1;
+    }
+
     &.open {
-      transform: none;
+      right: 0;
       opacity: 1;
       transition: all 0.3s ease;
     }
   }
 
   &__link {
-    @include main-font(600);
+    @include main-font('LatoSemibold', 600);
     font-size: 13px;
     line-height: 16px;
     text-transform: uppercase;
     text-align: right;
+
+    @include desktop {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &--active {
+      color: #43abf0;
+      pointer-events: none;
+    }
   }
 }
